@@ -66,7 +66,7 @@ def smith_eisner_shannon_entropy(w: 'Tensor[N, N]') -> 'Tensor[1]':
     """
     Compute the Shannon entropy of W using method described in:
     https://www.cs.jhu.edu/~jason/papers/smith+eisner.emnlp07.pdf
-    Function has a runtime of O(N^3)
+    Function has a runtime of O(N^4)
     """
     n = w.size(0)
     h = torch.tensor(0).double().to(device)
